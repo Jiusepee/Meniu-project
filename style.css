@@ -1,0 +1,538 @@
+.wow {
+  width: 100px;
+}
+
+/* main variables for css */
+
+:root {
+  --orange: #FAB21C;
+  --white: #ffffff;
+  --black: #1D1D1D;
+  --selectedHeartBtn: red;
+  --headerFontStyle: 'Lobster', cursive;
+  --textFontStyle: 'Poppins', sans-serif;
+}
+
+/* main elements css style */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('./back_img/pexels-ella-olsson-1640772.jpg') top right no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  position: relative;
+  color: var(--white);
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: var(--headerFontStyle);
+  margin-top: 20px;
+}
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+  font-family: var(--headerFontStyle);
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  font-family: var(--textFontStyle);
+}
+
+/* custom elements css style */
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0.375rem 0.75rem;
+  display: inline-block;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.main-header {
+  background: var(--black);
+  opacity: 0.95;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.menu {
+  padding: 5rem 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.filter-btn:hover {
+  color: var(--orange);
+}
+
+span i:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  flex-wrap: wrap;
+  gap: 3rem 2rem;
+  justify-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+  border-radius: 5px;
+  padding: 5px;
+  background: var(--black);
+  opacity: 0.95;
+}
+
+.photo {
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.food-img{
+  position: relative;
+}
+
+.food-img span{
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--white);
+  top: .4rem;
+  right: .8rem;
+}
+
+span .fas {
+  color: var(--selectedHeartBtn);
+}
+
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+}
+.item-info h4 {
+  margin-bottom: 0.5rem;
+  color: var(--orange);
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  height: 110px;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart {
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.food-price-calc{
+  padding: 1.2rem 0 0.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-price-calc h2{
+  font-size: 1.5rem;
+  margin-bottom: 0px;
+}
+
+.food-quantity{
+  display: flex;
+  align-items: center;
+}
+
+.food-quantity div{
+  width: 35px;
+  height: 35px;
+  color: var(--black);
+  font-size: 1rem;
+}
+
+.order-val{
+  font-weight: 600;
+  background: var(--white);
+  border-left: var(--black) solid 0.5px;
+  border-right: var(--black) solid 0.5px;
+}
+
+.order-dec,
+.order-inc,
+.order-order{
+  cursor: pointer;
+  background: var(--white);
+}
+
+.order-dec {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.order-inc {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.order-dec:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.order-inc:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.order-order:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+
+/* styling modal */
+
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+#modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: animatemodal;
+    animation-duration: .4s;
+}
+
+#first-part-block {
+  height: 250px;
+  width: 400px;
+  background-color: var(--black);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  opacity: 0.999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#food-icon {
+  color: var(--orange);
+  height: 200px;
+  width: 200px;
+}
+
+.modal-form {
+    height: 250px;
+    width: 400px;
+    background-color: var(--white);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.modal-input-div {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-input {
+    width: 350px;
+    height: 35px;
+    background: var(--black);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 0.6em;
+    padding-left: 5px;
+}
+
+.modal-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.label_delivery {
+    margin-top: 5px;
+    color: var(--black);
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 17px;
+    padding-bottom: 3px;
+    font-weight: 800;
+    font-family: var(--textFontStyle);
+}
+
+#select_delivery {
+    width: 350px;
+    height: 35px;
+    margin: auto;
+    background: var(--black);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 0.6em;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.label_address {
+    margin-top: 0px;
+    display: block;
+    color: var(--black);
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 17px;
+    padding-bottom: 3px;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: var(--textFontStyle);
+}
+
+
+#close-btn {
+    cursor: pointer;
+    font-size: 3rem;
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+}
+
+#close-btn:hover {
+  color: var(--orange);
+}
+
+.order-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.order-btn {
+    width: 200px;
+    height: 35px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    color: var(--white);
+    background: var(--black);
+    line-height: 1.15;
+    font-size: 16px;
+}
+
+.order-btn:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 var(--white), 0 0 0 3px var(--orange);
+}
+
+@keyframes animatemodal {
+    from {
+        top: -300px;
+    }
+
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+/* changes the scrollbar to look more aesthetic */
+::-webkit-scrollbar {
+  width: 13px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 0;
+}
+
+/* responsive design */
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 3.5em;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .filter-btn {
+    font-size: 1.5em;
+    /* border: 0.2px solid var(--white); */
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+  .photo {
+    height: 206px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw; 
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 209px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background: url('./back_img/pexels-ella-olsson-1640772.jpg');
+  }
+}
+
